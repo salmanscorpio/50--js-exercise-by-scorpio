@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scorpio's 50 JS Examples</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="container py-4">
+
+    <!-- HEADER -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>⚡Scorpio Does JavaScript ⚡</h2>
+        <button class="btn btn-dark" id="themeToggle">Toggle Mode</button>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- 1 -->
+        <div class="col-md-4"><div class="card box"><h5>1. Show Date</h5><button onclick="showDate()">Run</button><p id="date"></p></div></div>
+
+        <!-- 2 -->
+        <div class="col-md-4"><div class="card box"><h5>2. Live Clock</h5><p id="clock"></p><button onclick="startClock()">Start</button></div></div>
+
+        <!-- 3 -->
+        <div class="col-md-4"><div class="card box"><h5>3. Calculator</h5>
+        <input id="num1" placeholder="Number 1">
+        <input id="num2" placeholder="Number 2">
+        <button onclick="add()">Add</button>
+        <p id="sum"></p></div></div>
+
+        <!-- 4 -->
+        <div class="col-md-4"><div class="card box"><h5>4. Toggle Text</h5>
+        <p id="toggleText">Hello Scorpio</p>
+        <button onclick="toggleText()">Toggle</button></div></div>
+
+        <!-- 5 -->
+        <div class="col-md-4"><div class="card box"><h5>5. Change Background</h5>
+        <input type="color" id="colorPicker">
+        <button onclick="changeBg()">Apply</button></div></div>
+
+        <!-- 6 -->
+        <div class="col-md-4"><div class="card box"><h5>6. Random Number</h5>
+        <button onclick="randomNum()">Generate</button>
+        <p id="random"></p></div></div>
+
+        <!-- 7 -->
+        <div class="col-md-4"><div class="card box"><h5>7. Counter</h5>
+        <button onclick="inc()">+</button>
+        <button onclick="dec()">-</button>
+        <p id="count">0</p></div></div>
+
+        <!-- 8 -->
+        <div class="col-md-4"><div class="card box"><h5>8. Character Counter</h5>
+        <textarea id="textInput"></textarea>
+        <p id="charCount">0</p></div></div>
+
+        <!-- 9 -->
+        <div class="col-md-4"><div class="card box"><h5>9. Password Strength</h5>
+        <input type="password" id="password">
+        <p id="strength"></p></div></div>
+
+        <!-- 10 -->
+        <div class="col-md-4"><div class="card box"><h5>10. Email Validation</h5>
+        <input id="email" placeholder="Enter Email">
+        <button onclick="validateEmail()">Validate</button></div></div>
+
+        <!-- 11 -->
+        <div class="col-md-4"><div class="card box"><h5>11. Sort Array</h5>
+        <button onclick="sortArray()">Sort</button></div></div>
+
+        <!-- 12 -->
+        <div class="col-md-4"><div class="card box"><h5>12. Random Color</h5>
+        <button onclick="randomColor()">Change</button></div></div>
+
+        <!-- 13 -->
+        <div class="col-md-4"><div class="card box"><h5>13. Copy Text</h5>
+        <button onclick="copyText()">Copy</button></div></div>
+
+        <!-- 14 -->
+        <div class="col-md-4"><div class="card box"><h5>14. Scroll to Top</h5>
+        <button onclick="scrollTopBtn()">Go Top</button></div></div>
+
+        <!-- 15 -->
+        <div class="col-md-4"><div class="card box"><h5>15. Timer</h5>
+        <button onclick="startTimer()">Start</button></div></div>
+
+        <!-- 16 -->
+        <div class="col-md-4"><div class="card box"><h5>16. Stopwatch</h5>
+        <button onclick="startSW()">Start</button>
+        <button onclick="stopInterval()">Stop</button></div></div>
+
+        <!-- 17 -->
+        <div class="col-md-4"><div class="card box"><h5>17. Save Data</h5>
+        <button onclick="saveData()">Save</button></div></div>
+
+        <!-- 18 -->
+        <div class="col-md-4"><div class="card box"><h5>18. Get Data</h5>
+        <button onclick="getData()">Get</button></div></div>
+
+        <!-- 19 -->
+        <div class="col-md-4"><div class="card box"><h5>19. Clear Storage</h5>
+        <button onclick="clearData()">Clear</button></div></div>
+
+        <!-- 20 -->
+        <div class="col-md-4"><div class="card box"><h5>20. Get Location</h5>
+        <button onclick="getLocation()">Get</button></div></div>
+
+        <!-- 21 -->
+        <div class="col-md-4"><div class="card box"><h5>21. Window Width</h5>
+        <button onclick="showWidth()">Show</button></div></div>
+
+        <!-- 22 -->
+        <div class="col-md-4"><div class="card box"><h5>22. Window Height</h5>
+        <button onclick="showHeight()">Show</button></div></div>
+
+        <!-- 23 -->
+        <div class="col-md-4"><div class="card box"><h5>23. Online Status</h5>
+        <button onclick="checkOnline()">Check</button></div></div>
+
+        <!-- 24 -->
+        <div class="col-md-4"><div class="card box"><h5>24. Vibrate</h5>
+        <button onclick="vibrate()">Vibrate</button></div></div>
+
+        <!-- 25 -->
+        <div class="col-md-4"><div class="card box"><h5>25. History Back</h5>
+        <button onclick="goBack()">Back</button></div></div>
+
+        <!-- 26 -->
+        <div class="col-md-4"><div class="card box"><h5>26. History Forward</h5>
+        <button onclick="goForward()">Forward</button></div></div>
+
+        <!-- 27 -->
+        <div class="col-md-4"><div class="card box"><h5>27. Reload Page</h5>
+        <button onclick="reloadPage()">Reload</button></div></div>
+
+        <!-- 28 -->
+        <div class="col-md-4"><div class="card box"><h5>28. Show URL</h5>
+        <button onclick="showURL()">Show</button></div></div>
+
+        <!-- 29 -->
+        <div class="col-md-4"><div class="card box"><h5>29. JSON Parse</h5>
+        <button onclick="parseJSON()">Run</button></div></div>
+
+        <!-- 30 -->
+        <div class="col-md-4"><div class="card box"><h5>30. JSON Stringify</h5>
+        <button onclick="stringifyJSON()">Run</button></div></div>
+
+        <!-- 31 -->
+        <div class="col-md-4"><div class="card box"><h5>31. Math Round</h5>
+        <button onclick="roundNum()">Run</button></div></div>
+
+        <!-- 32 -->
+        <div class="col-md-4"><div class="card box"><h5>32. Math Floor</h5>
+        <button onclick="floorNum()">Run</button></div></div>
+
+        <!-- 33 -->
+        <div class="col-md-4"><div class="card box"><h5>33. Math Ceil</h5>
+        <button onclick="ceilNum()">Run</button></div></div>
+
+        <!-- 34 -->
+        <div class="col-md-4"><div class="card box"><h5>34. Random Boolean</h5>
+        <button onclick="randomBool()">Run</button></div></div>
+
+        <!-- 35 -->
+        <div class="col-md-4"><div class="card box"><h5>35. Confirm Box</h5>
+        <button onclick="confirmBox()">Run</button></div></div>
+
+        <!-- 36 -->
+        <div class="col-md-4"><div class="card box"><h5>36. Prompt Box</h5>
+        <button onclick="promptBox()">Run</button></div></div>
+
+        <!-- 37 -->
+        <div class="col-md-4"><div class="card box"><h5>37. Alert Box</h5>
+        <button onclick="alertBox()">Run</button></div></div>
+
+        <!-- 38 -->
+        <div class="col-md-4"><div class="card box"><h5>38. Print Page</h5>
+        <button onclick="printPage()">Run</button></div></div>
+
+        <!-- 39 -->
+        <div class="col-md-4"><div class="card box"><h5>39. Add Class</h5>
+        <button onclick="addClass()">Run</button></div></div>
+
+        <!-- 40 -->
+        <div class="col-md-4"><div class="card box"><h5>40. Remove Class</h5>
+        <button onclick="removeClass()">Run</button></div></div>
+
+        <!-- 41 -->
+        <div class="col-md-4"><div class="card box"><h5>41. Toggle Class</h5>
+        <button onclick="toggleClass()">Run</button></div></div>
+
+        <!-- 42 -->
+        <div class="col-md-4"><div class="card box"><h5>42. Set Attribute</h5>
+        <button onclick="setAttr()">Run</button></div></div>
+
+        <!-- 43 -->
+        <div class="col-md-4"><div class="card box"><h5>43. Remove Attribute</h5>
+        <button onclick="removeAttr()">Run</button></div></div>
+
+        <!-- 44 -->
+        <div class="col-md-4"><div class="card box"><h5>44. Show Width Resize</h5>
+        <p>Resize window → check console</p></div></div>
+
+        <!-- 45 -->
+        <div class="col-md-4"><div class="card box"><h5>45. Scroll Detect</h5>
+        <p>Scroll → check console</p></div></div>
+
+        <!-- 46 -->
+        <div class="col-md-4"><div class="card box"><h5>46. Key Press Detect</h5>
+        <p>Press any key → console</p></div></div>
+
+        <!-- 47 -->
+        <div class="col-md-4"><div class="card box"><h5>47. Mouse Move</h5>
+        <p>Move mouse → console</p></div></div>
+
+        <!-- 48 -->
+        <div class="col-md-4"><div class="card box"><h5>48. Double Click</h5>
+        <p>Double click anywhere</p></div></div>
+
+        <!-- 49 -->
+        <div class="col-md-4"><div class="card box"><h5>49. Drag Event</h5>
+        <p>Drag anywhere</p></div></div>
+
+        <!-- 50 -->
+        <div class="col-md-4"><div class="card box"><h5>50. Page Load Event</h5>
+        <p>Reload page → console</p></div></div>
+
+    </div>
+</div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
